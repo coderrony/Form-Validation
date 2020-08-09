@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: var(--font-name);
+    background:#ddd;
+}
+:root{
+    --font-name :"Open Sans","sans-serif"; 
+    --success-color:#2ecc71;
+    --error-color:#e74c3c;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 90vh;
+    width: 100%;
+}
+.content{
+    background:#fff;
+    padding:2rem;
+    transition:0.4s ease-in-out;
+    -webkit-transition:0.4s ease-in-out;
+    -moz-transition:0.4s ease-in-out;
+    -ms-transition:0.4s ease-in-out;
+    -o-transition:0.4s ease-in-out;
+    width:30rem;
+}
+.content:hover{
+    box-shadow:0px 5px 10px rgb(0,0,0,0.5);
+}
+.content h2{
+  text-align: center;
+}
+.content form{
+   padding:1rem 0;
+}
+.form-control label{
+    color: rgb(119, 119, 119);
+    display: block;
+    margin-bottom: 5px;
+    margin:0.5rem;
+}
+.form-control input{
+  display: block;
+  width: 100%;
+  padding:0.5rem;
+  margin:5px;
+ outline: none;
+}
+.form-control input:focus{
+   border: 2px solid rgb(119, 119, 119);
+}
+.form-control{
+    position: relative;
+    padding:5px 0;
+}
+.form-control small{
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0.5rem;
+    visibility:hidden;
+}
+.form-control i{
+  visibility:hidden;
+}
+.form-control i{
+    position: absolute;
+    bottom:1.2rem;
+    right: 0;
+}
+.form-control.error input{
+    border-color:var(--error-color);
+}
+.form-control.error small{
+   color:var(--error-color);
+   visibility: visible;
+}
+.form-control.success input{
+    border-color:var(--success-color);
+    visibility: visible;
+}
+.form-control.success i.fa-check-circle{
+    color:var(--success-color);
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation-circle{
+    color:var(--error-color);
+    visibility: visible;
+}
+button{
+    padding:10px;
+    background:var(--success-color);
+    color:#fff;
+    border:none;
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+    margin-top: 1rem;
+    outline:none;
+}
